@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 20px;
+        }
+        [class^="wrap"]{
+            position: relative;
+            box-shadow:  0 0 10px lime;
+            width: 300px;
+        }
+        [class^="wrap"] div{
+            width: 80px;
+            height: 80px;
+            box-shadow:  0 0 10px lime;
+            font-size: 20px;
+            color: #fff;
+            padding: 10px;
+
+        }
+        .a{
+            background: rgba(141, 75, 246, 0.9);
+}
+        .b{
+            background: salmon;
+        }
+        .c{
+            background: royalblue;
+        }
+        .d{
+            background: seagreen;
+        }
+        .a{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .b{
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .c{
+            position: absolute;
+            top: 80px;
+            left: 80px;
+        }
+        .d{
+            position: absolute;
+            top: 120px;
+            left: 120px;
+        }
+        .wrap1 .a{
+            z-index: 10;
+        }
+        .wrap1 .b{
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrap">
+          <div class="a">A</div>
+          <div class="b">B</div>
+          <div class="c">C</div>
+          <div class="d">D</div>
+        </div>
+        
+        
+        <div class="wrap1">
+          <div class="a">A</div>
+          <div class="b">B</div>
+          <div class="c">C</div>
+          <div class="d">D</div>
+        </div>
+        <div>
+</body>
+</html>
