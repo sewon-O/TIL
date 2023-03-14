@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS 상속</title>
+		<style>
+			/* width, height, margin, padding, border 와 같은 것은 상속되지 않는다. */
+			/* 그리고 button, input 요소처럼 form 관련 태그들은 상속받지 않기도 합니다. */
+			section {
+				color: red;
+				border: 5px solid pink;
+			}
+			h1 {
+				border: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h1>hello</h1>
+			<h2>hello</h2>
+			<button>Hello</button>
+			<input type="text" value="hello" />
+		</section>
+	</body>
+</html>

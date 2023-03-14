@@ -1,0 +1,38 @@
+div {
+	width: 100px;
+	height: 48px;
+	background: sandybrown;
+	line-height: 48px;
+	text-align: center;
+
+	box-sizing: border-box;
+}
+
+div ~ div {
+	margin-top: 20px;
+}
+
+.box1 {
+	color: #fff;
+	background: #343f50;
+	box-shadow: inset 5px 5px #4a5568;
+	border: 5px solid black;
+}
+
+.box2 {
+	background: linear-gradient(
+		180deg,
+		rgba(34, 193, 195, 1) 0%,
+		rgba(253, 187, 45, 1) 100%
+	);
+	border: 5px dashed rgb(134, 17, 136);
+	background-clip: padding-box;
+	border-radius: 24px;
+}
+
+.box3 {
+	background: #fff;
+	border: 5px solid lightgray;
+	box-shadow: 10px 10px 20px lightgray;
+	border-radius: 0px 24px 24px 24px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>href속성과 id로 페이지 내 이동 해시링크</title>
+		<style>
+			body {
+				background: salmon;
+				margin: 0;
+				padding: 0;
+			}
+			nav {
+				background: #fff;
+				position: fixed;
+				width: 100%;
+			}
+			div {
+				background: rosybrown;
+				height: 600px;
+				font-size: 80px;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			#one {
+				background: salmon;
+			}
+			#two {
+				background: skyblue;
+			}
+			#three {
+				background: slateblue;
+			}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="#one">move #1</a>
+			<a href="#two">move #2</a>
+			<a href="#three">move #3</a>
+		</nav>
+	</body>
+	<div id="one">one</div>
+	<div id="two">two</div>
+	<div id="three">three</div>
+</html>

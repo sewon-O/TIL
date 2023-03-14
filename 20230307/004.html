@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>텍스트 꾸미기</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			p {
+				border: 1px solid currentColor;
+				font-family: "Pretendard-Regular", Verdana, sans-serif;
+				font-family: "Nanum Brush Script", cursive;
+
+				font-size: 2em;
+				font-weight: 900;
+			}
+			p::first-letter {
+				text-transform: uppercase;
+			}
+
+			.dashed {
+				text-decoration: lime underline overline dashed auto;
+			}
+			.wavy {
+				text-decoration-color: royalblue;
+				text-decoration-line: line-through underline overline;
+				text-decoration-style: wavy;
+				text-decoration-thickness: 5px;
+				/* text-decoration: none; */
+				text-shadow: 1px 1px 3em red, 0 0 1em blue, 0 0 0.2em blue;
+				text-align: center;
+				vertical-align: middle;
+				line-height: 2em;
+			}
+            /* div{ */
+                /* display: flex; */
+                /* gap: 30px; */
+            /* } */
+            /* div, h2, div p{ */
+                /* flex-grow: 1; */
+            /* } */
+            p{
+                background: #eee;
+            }
+            [class $="break"]{
+                background: pink;
+                word-break: break-all;
+            }
+            [class $="keep"]{
+                background: skyblue;
+                word-break: keep-all;
+            }
+
+            .over, .ellipsis{
+                width: 400px;
+                border: 2px solid #ccc;
+            }
+            .ellipsis{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .over{
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 3;
+            }
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>abcd안녕하세요</p>
+		</div>
+		<p class="dashed">안녕하세요!</p>
+		<p class="wavy">안녕하세요!</p>
+
+		<div>
+			<h2>normal</h2>
+			<h2>break-all</h2>
+			<h2>keep-all</h2>
+		</div>
+		<div>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid odit
+				est aut dignissimos porro beatae! Quisquam vitae iusto atque accusantium
+				asperiores, ullam commodi quae tempora omnis alias porro cumque sit.
+			</p>
+			<p class="en-break">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis sequi
+				cum veritatis ad delectus deleniti nihil officiis vitae eum, sunt
+				eligendi animi id autem impedit quibusdam ut, nobis natus. Rem?
+			</p>
+			<p class="en-keep">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, esse magnam
+				nam cumque vel nisi quisquam mollitia ratione voluptate autem aperiam
+				minima quasi voluptas expedita aspernatur temporibus, maiores a
+				similique.
+			</p>
+            <div>
+                <p>우는 지혜는 그들은 얼마나 우리 운다. 이상 미묘한 내는 날카로우나 품에 산야에 것이다. 가는 것은 그것을 원대하고, 인류의 평화스러운 간에 풍부하게 있다. 이것을 작고 청춘 것은 있다. 이상의 얼마나 이것은 황금시대다. 트고, 그와 이상의 할지라도 맺어, 것이다.</p>
+                <p class="ko-break">우는 지혜는 그들은 얼마나 우리 운다. 이상 미묘한 내는 날카로우나 품에 
+            산야에 것이다. 가는 것은 그것을 원대하고, 인류의 평화스러운 간에 풍부하게 
+            있다. 이것을 작고 청춘 것은 있다. 이상의 얼마나 이것은 황금시대다. 트고, 그와
+            이상의 할지라도 맺어, 것이다.</p>
+                <p class="ko-keep">우는 지혜는 그들은 얼마나 우리 운다. 이상 미묘한 내는 날카로우나 품에 
+            산야에 것이다. 가는 것은 그것을 원대하고, 인류의 평화스러운 간에 풍부하게 
+            있다. 이것을 작고 청춘 것은 있다. 이상의 얼마나 이것은 황금시대다. 트고, 그와
+            이상의 할지라도 맺어, 것이다.</p>
+		</div>
+        <p class="over">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem impedit sunt esse accusamus, alias ullam maiores eius adipisci assumenda, nemo consequuntur et harum ut fugiat, distinctio saepe amet? A, reiciendis?
+        </p>
+        <p class="ellipsis">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro quas, fugit tempore vero id dolor esse, repudiandae ipsam provident nesciunt deleniti sed hic inventore molestias eum excepturi error neque qui?
+        </p>
+	</body>
+</html>

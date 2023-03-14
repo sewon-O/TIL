@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>list-style</title>
+		<style>
+			@counter-style stress {
+				system: fixed;
+				symbols: ☹️ 😠 😡 🤬 🤯;
+				suffix: "";
+			}
+
+			ol > li {
+				list-style: stress;
+			}
+			ul {
+				list-style: none;
+				padding: 0;
+			}
+			.ul1 li::before {
+				content: "😀";
+			}
+			.ul2 li {
+				position: relative;
+				padding-left: 1em;
+			}
+			.ul2 li::before {
+				content: "";
+				display: block;
+				width: 0.3em;
+				height: 0.3em;
+
+				transform: rotate(45deg);
+				border: 2px solid royalblue;
+				position: absolute;
+				left: 0;
+				top: 0.4em;
+			}
+
+			li:nth-child(3) {
+				color: lime;
+			}
+			li:nth-child(odd) {
+				color: lime;
+			}
+			li:nth-child(2n) {
+				color: rosybrown;
+			}
+			li:first-child {
+				color: black;
+			}
+			li:not(:first-child) {
+				margin-top: 20px;
+			}
+			:root {
+				--main-color: hotpink;
+				--pane-padding: 5px 42px;
+			}
+		</style>
+	</head>
+	<body>
+		<ol>
+			<li>첫번째</li>
+			<li>두번째</li>
+			<li>세번째</li>
+			<li>네번째</li>
+			<li>다섯번째</li>
+			<li>여섯번째</li>
+			<li>일곱번째</li>
+			<li>여덟번째</li>
+			<li>아홉번째</li>
+			<li>열번째</li>
+		</ol>
+
+		<ul class="ul1">
+			<li>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores rem
+				fuga similique autem delectus quae obcaecati sint provident aut
+				reprehenderit rerum eligendi quod illum voluptate nisi, laboriosam
+				quibusdam odit fugit.
+			</li>
+			<li>두번째</li>
+			<li>세번째</li>
+			<li>네번째</li>
+			<li>다섯번째</li>
+		</ul>
+		<ul class="ul2">
+			<li>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+				voluptas animi, placeat eaque porro nam asperiores repudiandae! Atque
+				ipsa, numquam hic molestiae doloribus impedit, nisi ipsum, quod saepe
+				eligendi dolorem!
+			</li>
+			<li>두번째</li>
+			<li>세번째</li>
+			<li>네번째</li>
+			<li>다섯번째</li>
+		</ul>
+	</body>
+</html>
