@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>float3</title>
+		<style>
+			.container {
+				background: skyblue;
+				margin-bottom: 20px;
+			}
+
+			[class^="box"] {
+				width: 100px;
+				height: 100px;
+				background: rgb(141, 75, 246);
+				color: #fff;
+				line-height: 100px;
+				text-align: center;
+			}
+
+			[class^="box"]:first-child {
+				background: royalblue;
+			}
+			[class^="box"]:last-child {
+				background: salmon;
+			}
+			/* 자식 요소들이 모두 float 속성을 가지게 되면, 컨테이너 요소의 높이에 자식 요소들의 높이가 포함되지 않는 것에 주의해야함 */
+			.box-left {
+				float: left;
+			}
+
+			/* 해결방법 */
+			/* 1. 부모에게 높이값 지정 */
+			/* 2. overflow:hidden */
+			/* 3. clear-fix 방법 */
+
+			/* .container:nth-child(2) {
+				border: 1px solid black;
+				height: 100px;
+			} */
+			/* .container {
+				overflow: hidden;
+			} */
+			.container::after {
+				content: "";
+				display: block;
+				clear: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			container
+			<div class="box">A</div>
+			<div class="box">B</div>
+			<div class="box">C</div>
+		</div>
+
+		<div class="container">
+			container
+			<div class="box-left">A</div>
+			<div class="box-left">B</div>
+			<div class="box-left">C</div>
+		</div>
+	</body>
+</html>
