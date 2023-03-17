@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>grid6</title>
+		<style>
+			p {
+				margin: 0;
+			}
+			.container {
+				display: grid;
+				grid-template-columns: 150px 150px 150px;
+				grid-template-rows: 200px 200px;
+				gap: 10px;
+				width: 600px;
+				height: 600px;
+				border: 2px solid #000;
+			}
+
+			.container > div {
+				background: #eee;
+			}
+
+			.container p {
+				width: 80px;
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+			}
+
+			.a p {
+				background-color: royalblue;
+			}
+
+			.b p {
+				background-color: gold;
+			}
+
+			.c p {
+				background-color: slateblue;
+			}
+
+			.d p {
+				background-color: sandybrown;
+			}
+
+			.e p {
+				background-color: salmon;
+			}
+
+			.f p {
+				background-color: seagreen;
+			}
+
+			.container {
+				align-items: center;
+				justify-items: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="a">
+				<p>1</p>
+			</div>
+			<div class="b">
+				<p>2</p>
+			</div>
+			<div class="c">
+				<p>3</p>
+			</div>
+			<div class="d">
+				<p>4</p>
+			</div>
+			<div class="e">
+				<p>5</p>
+			</div>
+			<div class="f">
+				<p>6</p>
+			</div>
+		</div>
+	</body>
+</html>
