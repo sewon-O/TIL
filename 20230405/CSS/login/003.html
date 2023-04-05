@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>백그라운드 재생</title>
+    <style>
+      .full-screen-vid {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        /* 최소너비가 동영상 원본 너비 */
+        min-height: 100%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        opacity: 0.3;
+      }
+    </style>
+  </head>
+  <body>
+    <video
+      class="full-screen-vid"
+      autoplay
+      controls
+      muted
+      loop
+      src="nextlevel.mp4"
+    ></video>
+  </body>
+</html>
